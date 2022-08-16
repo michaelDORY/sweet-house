@@ -2,7 +2,7 @@
 // import { useQuery, gql } from "@apollo/client";
 // import { useDebounce } from "use-debounce";
 import Layout from "src/components/layout";
-// import Map from "src/components/map";
+import Map from "src/components/map";
 // import HouseList from "src/components/houseList";
 // import { useLastData } from "src/utils/useLastData";
 // import { useLocalState } from "src/utils/useLocalState";
@@ -11,7 +11,12 @@ import Layout from "src/components/layout";
 export default function Home() {
   return (
     <Layout>
-      <div>Hello world</div>
+      <div className='flex'>
+      <div className='w-1/2'></div>
+      <div className='w-1/2' style={{height: 'calc(100vh - 64px)'}}>
+        <Map />
+      </div>
+      </div>
     </Layout>
   );
 }

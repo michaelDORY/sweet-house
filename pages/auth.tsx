@@ -11,14 +11,14 @@ export default function Auth() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({req, res}) => {
-  const uid = loadIdToken(req as NextApiRequest)
-
-  if(uid) {
-    res.setHeader('location', '/')
-    res.statusCode = 302
-    res.end()
-  }
-
-  return {props: {}}
-}
+// export const getServerSideProps: GetServerSideProps = async ({req, res}) => {
+//   const uid = loadIdToken(req as NextApiRequest)
+//
+//   if(uid) {
+//     res.setHeader('location', '/')
+//     res.statusCode = 302
+//     res.end()
+//   }
+//
+//   return {props: {}}
+// }
